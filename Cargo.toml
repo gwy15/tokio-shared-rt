@@ -2,6 +2,8 @@
 name = "tokio-shared-rt"
 version = "0.1.0"
 edition = "2021"
+description = "Allow `#[tokio::test]` to use a *shared* runtime"
+license = "MIT"
 
 [workspace]
 members = ["tokio-shared-rt-macro"]
