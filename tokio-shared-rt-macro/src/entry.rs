@@ -395,7 +395,7 @@ fn parse_knobs(mut input: ItemFn, is_test: bool, config: FinalConfig) -> TokenSt
     };
 
     let body_ident = quote! { body };
-    let last_block = if config.shared == Some(true) {
+    let last_block = if config.shared.unwrap_or(true) {
         quote_spanned! {last_stmt_end_span=>
             #[allow(clippy::expect_used, clippy::diverging_sub_expression)]
             {

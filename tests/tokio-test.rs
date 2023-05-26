@@ -22,8 +22,8 @@ async fn write() {
 
 macro_rules! t {
     ($id:ident) => {
-        #[tokio::test]
-        // #[tokio_shared_rt::test(shared)]
+        // #[tokio::test]
+        #[tokio_shared_rt::test]
         async fn $id() {
             init().await;
             write().await;

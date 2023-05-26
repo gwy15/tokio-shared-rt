@@ -1,3 +1,5 @@
+#![doc = include_str!("../README.md")]
+
 use once_cell::sync::OnceCell;
 use tokio::runtime::Runtime;
 pub use tokio_shared_rt_macro::test;
