@@ -1,0 +1,19 @@
+[package]
+name = "tokio-shared-rt"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["tokio-shared-rt-macro"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+once_cell = "1.17.1"
+tokio = { version = "1", features = ["rt"] }
+tokio-shared-rt-macro = { path = "tokio-shared-rt-macro" }
+
+[dev-dependencies]
+parking_lot = "0.12.1"
+tokio = { version = "1", features = ["sync", "net", "parking_lot", "rt", "macros", "time", "io-util"] }
+
